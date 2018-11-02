@@ -1,3 +1,5 @@
 <view bindtap="addSql">添加数据</view>
 <view bindtap="getSql">查询数据</view>
 <view bindtap="getSqlByd">按条件查询</view>
+<view bindtap="update">修改数据</view>
+<view bindtap="del">删除数据</view>
