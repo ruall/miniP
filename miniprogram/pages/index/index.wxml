@@ -40,4 +40,10 @@
     </navigator>
   </view>
 
+  <view class="uploader">
+    <navigator url="../test/test" open-type="navigate" class="uploader-text">
+      <text>数据库操作</text>
+    </navigator>
+  </view>
+
 </view>
