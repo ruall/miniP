@@ -1,13 +1,15 @@
-// 云函数入口文件
 const cloud = require('wx-server-sdk')
-
 cloud.init()
-const db = cloud.database();
-// 云函数入口函数
+const db = cloud.database()
+const _ = db.command
 exports.main = async (event, context) => {
-  return db.collection('mini').doc(event.id).update({
-    data: {
-      done: event.done
-    }
-  })
+  try {
+    return await db.collection('article_list').doc(event.id).update({
+      data: {
+        comment: _.push(event.comment)
+      }
+    })
+  } catch (e) {
+    console.error(e)
+  }
 }

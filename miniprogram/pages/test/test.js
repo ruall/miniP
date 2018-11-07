@@ -15,10 +15,11 @@ Page({
     wx.cloud.callFunction({
       name:'addList',
       data:{
-        description:'新添加的',
+        description:'123',
         due: '',
+        yy:'2018-11-06',
         tags:['1','2'],
-        progress:80,
+        progress:100,
         done: false
       }
     }).then(res=>{

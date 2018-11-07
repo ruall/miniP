@@ -7,5 +7,5 @@ const db = cloud.database();
 // 云函数入口函数
 //查询数据库所有信息
 exports.main = async (event, context) => {
-  return db.collection('mini').get()
+  return db.collection('article_list').get()
 }

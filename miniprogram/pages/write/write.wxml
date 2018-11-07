@@ -1,0 +1,17 @@
+<view class="container">
+
+<textarea auto-focus="true" focus="true" placeholder='请输入内容' placeholder-style="pl" bindconfirm="text" bindblur="text"></textarea>
+
+<button class="addPic" bindtap='addPic' wx:if="{{image.length == 0}}">添加图片</button>
+<image src='{{image}}' mode="aspectFill"></image>
+<i-message id="message" />
+<view class="container" wx:if="{{show}}">
+    <i-spin fix></i-spin>
+</view>
+<button class="addPic green" wx:if="{{showT}}" bindtap='save'>提交</button>
+<i-tab-bar current="{{ current }}" bindchange="handleChange" color="#E45559" fixed="bottom" i-class="borderT">
+    <i-tab-bar-item key="index" img="../../images/index.png" current-img="../../images/index-fill.png" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="write" img="../../images/write.png" current-img="../../images/write-fill.png" title="发布"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" img="../../images/mine.png" current-img="../../images/mine-fill.png" title="我的"></i-tab-bar-item>
+</i-tab-bar>
+</view>

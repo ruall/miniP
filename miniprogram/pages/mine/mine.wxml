@@ -1,0 +1,16 @@
+<view class="container">
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+<i-tab-bar current="{{ current }}" bindchange="handleChange" color="#E45559" fixed="bottom" i-class="borderT">
+    <i-tab-bar-item key="index" img="../../images/index.png" current-img="../../images/index-fill.png" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="write" img="../../images/write.png" current-img="../../images/write-fill.png" title="发布"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" img="../../images/mine.png" current-img="../../images/mine-fill.png" title="我的"></i-tab-bar-item>
+</i-tab-bar>
+</view>
