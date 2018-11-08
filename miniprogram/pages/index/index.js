@@ -73,6 +73,7 @@ Page({
       }
     }).then(res => {
       console.log(res.result);
+      that.getAll();
     }).catch(console.error);
     this.setData({
       visible1: false
