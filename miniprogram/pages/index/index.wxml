@@ -3,18 +3,20 @@
 <i-message id="message" />
 <view class="list">
   <view class="list_info" wx:for='{{list}}' wx:key='{{item._id}}'>
-    <image src='{{item.image}}' mode="aspectFill"></image>
-    <text class='title'>{{item.title}}</text>
-    <view class='author'>
-      <text style='padding-right:10px'>{{item.name}}</text>
-      <text>{{item.time}}</text>
-      <view class="spot" bindtap='comment' data-id='{{item._id}}'><image src='../../images/comment.png' mode="widthFix"></image></view>
-    </view>
-    <view class="comment" wx:if="{{item.comment.length>0}}">
-      <view wx:for="{{item.comment}}" wx:key="{{index}}" wx:for-item="list">
-        <text style='padding-right:10px'>{{list.name}}</text>
-        <text>{{list.time}}</text>
-        <text class="content">{{list.content}}</text>
+    <view class='bg_img' style='background-image:url("{{item.image}}")'>
+      <image src='{{item.image}}' mode="aspectFill"></image>
+      <text class='title'>{{item.title}}</text>
+      <view class='author'>
+        <text style='padding-right:10px'>{{item.name}}</text>
+        <text>{{item.time}}</text>
+        <view class="spot" bindtap='comment' data-id='{{item._id}}'><image src='../../images/comment.png' mode="widthFix"></image></view>
+      </view>
+      <view class="comment" wx:if="{{item.comment.length>0}}">
+        <view wx:for="{{item.comment}}" wx:key="{{index}}" wx:for-item="list">
+          <text style='padding-right:10px'>{{list.name}}</text>
+          <text>{{list.time}}</text>
+          <text class="content">{{list.content}}</text>
+        </view>
       </view>
     </view>
   </view>

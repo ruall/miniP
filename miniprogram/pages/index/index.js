@@ -27,10 +27,20 @@ Page({
       name: 'getAll',
     })
       .then(res => {
-        that.setData({
-          list: res.result.data
-        })
-        console.log(that.data.list);
+        var lists = res.result.data
+        for (let [index, item] of lists.entries()){
+          wx.cloud.getTempFileURL({
+            fileList: [item.image]
+          }).then(ress => {
+            // get temp file URL
+            lists[index].image = ress.fileList['0'].tempFileURL;
+            that.setData({
+              list: lists,
+            })
+          }).catch(error => {
+            // handle error
+          })
+        }
       })
       .catch(console.error);
   },
@@ -72,7 +82,6 @@ Page({
         comment: parame,
       }
     }).then(res => {
-      console.log(res.result);
       that.getAll();
     }).catch(console.error);
     this.setData({

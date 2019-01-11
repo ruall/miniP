@@ -8,6 +8,96 @@
     </block>
   </view>
 
+
+  <view class="container_s">
+    <view class="wave"></view>
+  </view>
+
+  <view>
+  
+  
+    <view class="g-number-container vision preserve">
+      <view class="g-number-rotate preserve">
+        <!-- <view class="g-number preserve" data-digit="{{timeList.days1}}">
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+        </view>
+        <view class="g-number preserve" data-digit="{{timeList.days2}}">
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+        </view> 
+        <div class="g-comma preserve"></div> -->
+        <view class="g-number preserve" data-digit="{{timeList.hours1}}">
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+        </view>
+        <view class="g-number preserve" data-digit="{{timeList.hours2}}">
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+        </view>
+        <div class="g-comma preserve"></div>
+        <view class="g-number preserve" data-digit="{{timeList.minutes1}}">
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+        </view>
+        <view class="g-number preserve" data-digit="{{timeList.minutes2}}">
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+        </view>
+        <div class="g-comma preserve"></div>
+        <view class="g-number preserve" data-digit="{{timeList.seconds1}}">
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+        </view>
+        <view class="g-number preserve" data-digit="{{timeList.seconds2}}">
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+          <view class="g-line preserve translate"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
 <i-tab-bar current="{{ current }}" bindchange="handleChange" color="#E45559" fixed="bottom" i-class="borderT">
     <i-tab-bar-item key="index" img="../../images/index.png" current-img="../../images/index-fill.png" title="首页"></i-tab-bar-item>
     <i-tab-bar-item key="write" img="../../images/write.png" current-img="../../images/write-fill.png" title="发布"></i-tab-bar-item>
