@@ -1,6 +1,5 @@
 //index.js
 const app = getApp()
-
 const { $Message } = require('../../dist/base/index')
 
 Page({
